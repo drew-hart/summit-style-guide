@@ -80,7 +80,8 @@ elseif key_name then
 			specific app.
 		]]--
 else
-	-- no err was returned and value ~= true, so something bad happened		print("datastore error - get row: no error returned and res == nil")
+	-- no err was returned and value ~= true, so something bad happened
+	print("datastore error - get row: no error returned and res == nil")
 end	
 ```
 
