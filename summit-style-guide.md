@@ -1,11 +1,12 @@
 ##  Style
 ------
-### **Method names**
+### **Function names**
 
-Naming things is one of the hard problems in computer science. If a method is named get_message_queue_name and it is actually doing something completely different like sanitizing HTML from the input, then that’s an inaccurate method name. And probably a misleading function.
+Naming methods is a hard problem for developers. If a method is named get_time_of_day_routing and it is asking for input form a caller, then that’s an inaccurate method name. And probably a misleading function name.
 
 ### **Variable names**
 `foo` or `bar` are not useful names for data structures. `e` is equally not as useful when compared to `exception` . Be as verbose as you need to be. Expressive variable names make it easier to understand code when we have to revisit it later.
+
 ### **Functionl length**
 The rule of thumb is that if the function is over 50 lines, then it should likely be broken up into smaller pieces.
 
