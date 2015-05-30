@@ -29,5 +29,16 @@ Is  the code easy to understand? Have you had someone who has not been working o
 ### Creating unit tests
 When creating tests, how thoughtful is the testing? You should include testing for all paths within an applications. For example, if a call flow has several routes, are you testing all of them. Are you testing for failure conditions in the call flow? Finally, are your tests easy to read, so that when the code should need to be updated and tests fail, then you can understand where the failure is to learn more.
 
+## Reviewing before you push
+Before submitting my code, I will often do a git add for the affected files or directories and then run a git diff --staged to examine the changes I have not yet committed. Usually I’m looking for things like:
+
+* Did I leave a comment or TODO in?
+* Does the function name make sense?
+* Does the variable name make sense?
+* Should the function be split up?
+* Do the comments makes sense?
+* Do I have commented code included?
+
+Make sure that you give your own code a passing grade before pushing it to the repository. Also, don't subject other people to finding easy mistakes that you can fix on your own. Doing this will let others who review your code focus on providing you with creative ideas on how to improve the code, instead of style.
 
 
