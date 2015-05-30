@@ -29,8 +29,8 @@ Is  the code easy to understand? Have you had someone who has not been working o
 ### Creating unit tests
 When creating tests, how thoughtful is the testing? You should include testing for all paths within an applications. For example, if a call flow has several routes, are you testing all of them. Are you testing for failure conditions in the call flow? Finally, are your tests easy to read, so that when the code should need to be updated and tests fail, then you can understand where the failure is to learn more.
 
-## Reviewing before you push
-Before submitting my code, I will often do a git add for the affected files or directories and then run a git diff --staged to examine the changes I have not yet committed. Usually I’m looking for things like:
+## Review first, push second
+Before submitting my code, I will often do a git add for the affected files or directories and then run a `git diff --staged` to examine the changes I have not yet committed. Usually I’m looking for things like:
 
 * Did I leave a comment or TODO in?
 * Does the function name make sense?
@@ -40,5 +40,24 @@ Before submitting my code, I will often do a git add for the affected files or d
 * Do I have commented code included?
 
 Make sure that you give your own code a passing grade before pushing it to the repository. Also, don't subject other people to finding easy mistakes that you can fix on your own. Doing this will let others who review your code focus on providing you with creative ideas on how to improve the code, instead of style.
+
+## The Code Review
+**Ask questions**
+
+* How does this method work?
+* If something the function relies on changes, what happens?
+* Should the function be more modular or should it be specific to the application? 
+
+**Compliment / reinforce good practices**
+One of the most important parts of the code review is to reward developers for their effort and to comment on their growth. Few things feel better than getting praise from a peer. Offer as many positive comments as possible. There's no such thing as too much.
+
+**In person or share via comments?**
+This depends on the situation, but if there are big changes that are taking place, then it may be easier to discuss it in person rather than sharing comments or insights via in-line comments in the code. Another situation where it may make sense to discuss in person, is if there is a lot of comments going back and forth. It simply may be easier to have a discusison in these cases as well. 
+
+**Explain reasoning**
+Just telling someone to do something, can't really hamper the learning curve. Instead, it can be better to ask the originating developer if there’s a better alternative to writing the code. The reviewing developer would do well by justifying why they think the code is worth fixing as well, so that the original developer has some context on what you're thikning. What you really want to avoid is the perception that the beneficial changes you're suggesting do not seem nit-picky. The additoinal context or explanation will go a long way to getting other developers to buy in on your suggestions and changes. And lastly, keep the commentary about the code and not the developer.
+
+**Suggest importance of fixes**
+Not all suggestions are created equal. Clarify which items are important to fix before considering the code review done. This is immensly useful for both  the reviewer and the reviewee. It makes the results of a review clear and actionable.
 
 
