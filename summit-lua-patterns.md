@@ -7,7 +7,7 @@ Additionally, in general you will want to inform the user of their wrong doing b
 
 Here's an example of a `channel.gather` which limits a users reponse to a single digit or either 1, 2 _or_ three:
 
-`channel.gather({maxDigit = 1, minDigit = 1, regex=[1,2,3]})`
+`channel.gather({maxDigits = 1, minDigits = 1, regex="[123]"})`
 
 
 ## Error Handling: Web Service Calls
@@ -35,7 +35,7 @@ end
 ```
 
 ## Error Handling: Datasore
-Datastore is the no-SQL database provided with any Summit Account. When applications use Datastore to gather dat, they shoudl ensure that the table exists, the key exists and the value is the one expected for the specific application's needs. If either the table, key or value are not existent or incorrect then the application should include logic that prevents the application from breaking. The applicaiton shoudl etierh include a default option if the data is absent or incorrect. Or, the application should exit gracefully and log information 
+Datastore is the key-value database provided with any Summit Account. When applications use Datastore to gather data, they should ensure that the table exists, the key exists and the value is the one expected for the specific application's needs. If either the table, key or value are not existent or incorrect then the application should include logic that prevents the application from breaking. The applicaiton should either include a default option if the data is absent or incorrect, or the application should exit gracefully and log information.
 
 ### Handling Tables Example:
 
@@ -66,14 +66,14 @@ end
 ]]--
 
 -- get the key_name
-local key_name, err = my_table:get_row_by_key('key_name')
+local row, err = my_table:get_row_by_key('key_name')
 
 -- check if an err was returned	
 if err then
 	print("datastore error - get row: " .. err)
 -- if values exists (it's not nil) then we got a return
-elseif key_name then
-	print("success - the row is: ".. key_name)
+elseif row then
+	print("success - the row is: ".. row)
 		--[[
 			Here you would check the key/value pair that's returned
 			and make sure the key and/or value are what you need for your
