@@ -11,9 +11,6 @@ Naming methods is a hard problem for developers. If a method is named get_time_o
 ### **Functionl length**
 The rule of thumb is that if the function is over 50 lines, then it should likely be broken up into smaller pieces.
 
-### **Class length** 
-The rule of thumb for classes, is that they should be under 300 lines in total. Ideally, they should be less than 100 lines. If classes are over 100 lines or approaching, 300 then it's likely they can be broken out into separate objects.
-
 ### **File length** 
 The rule of thumb for file length should be no more than 1,000 lines per file. Anything above 1,000 lines is a good sign that the file should be broken up into smaller, more focused files. As the file size goes up, discoverability goes down.
 
