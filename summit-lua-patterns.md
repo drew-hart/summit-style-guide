@@ -85,3 +85,20 @@ else
 end	
 ```
 
+## Error handling: Email
+```
+function email_voicemail(address, recording)
+	local to_addr 	= address
+	local from_addr = "drew.hart@corvisa.com"
+	local subject 	= "Voicemail for " .. sales_settings.data['name']
+	local body 		= "A voicemail message is attached"
+	
+	-- should return true if successful
+	res, err = email.send(to_addr, from_addr, subject, body, {files={['recording.mp3']=recording}})
+	if res then
+		log.info("email sent successfully")
+	else
+		log.debug("error: email failed - " .. err)
+	end
+end
+```
